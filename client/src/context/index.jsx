@@ -4,7 +4,7 @@ import { createContext, useContext } from 'react';
 
 const StateContext = createContext();
 
-const contractAddress = import.meta.env.CONTRACT_ADDRESS;
+const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
 
 export default function StateContextProvider({ children }) {
 	const { contract } = useContract(contractAddress);
