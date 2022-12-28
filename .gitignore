@@ -1,0 +1,8 @@
+# Common files
+node_modules
+.env
+package-lock.json
+
+# Web3
+/web3/build-info
+/web3/artifacts/cache
