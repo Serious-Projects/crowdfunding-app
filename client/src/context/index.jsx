@@ -4,8 +4,10 @@ import { createContext, useContext } from 'react';
 
 const StateContext = createContext();
 
+const contractAddress = import.meta.env.CONTRACT_ADDRESS;
+
 export default function StateContextProvider({ children }) {
-	const { contract } = useContract('0x373f5eA7a27A0a4579e72E826a59aD8054b0bF3D');
+	const { contract } = useContract(contractAddress);
 	const { mutateAsync: createCampaign } = useContractWrite(contract, 'createCampaign');
 	const address = useAddress();
 	const connect = useMetamask();
